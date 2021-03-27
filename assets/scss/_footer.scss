@@ -1,13 +1,18 @@
 footer {
-  background-color: $color-light;
-  opacity: 0.8;
   height: 100px;
+
+  opacity: 0.8;
+  background-color: $color-light;
 
   span {
     display: block;
-    text-align: center;
+
     padding-top: 40px;
+
+    text-align: center;
+
     color: $color-dark;
+
     font-size: 1.25rem;
   }
 }

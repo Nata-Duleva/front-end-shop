@@ -1,0 +1,57 @@
+legend {
+  font-weight: bold;
+}
+
+label {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.sidebar {
+  background-color: rgba($color-light, 0.3);
+  color: white;
+  padding: 15px 30px 30px;
+  border-right: 1px solid $color-light;
+
+  &-options {
+    display: block;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  &-btn {
+    border-color: white;
+    border-radius: 0;
+  }
+}
+
+.form {
+  &-group {
+    margin-bottom: 1rem;
+  }
+
+  &-check {
+    margin: 10px 0;
+
+    &-input {
+      height: 0;
+      width: 0;
+
+      &::before {
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-top: 0.35rem;
+        content: "";
+        border: 1px solid #ffffff;
+      }
+
+      &:checked::before {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+

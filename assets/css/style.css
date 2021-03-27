@@ -27,45 +27,49 @@
 }
 
 .header-menu {
+  white-space: nowrap;
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem;
-  white-space: nowrap;
 }
 
 .header-menu__search {
   display: inline-block;
   height: 50px;
   border: 1px solid #2c71b6;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .header-menu__search button {
-  border-radius: 0;
-  color: #ffffff;
-  border-color: #2c71b6;
-  background-color: #2c71b6;
-  padding: 0;
   margin: 5px;
+  padding: 0;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
+  color: #ffffff;
+  border-color: #2c71b6;
+  border-radius: 0;
+  background-color: #2c71b6;
 }
 
 .header-menu__search button:focus, .header-menu__search button:hover {
-  background-color: #ffffff;
   color: #2c71b6;
   border-color: #2c71b6;
+  background-color: #ffffff;
 }
 
 .header-menu__search button i {
-  padding: 10px;
   display: block;
+  padding: 10px;
 }
 
 .header-menu__search .form-control {
-  border: none;
-  font-size: 1.2rem;
-  background-color: transparent;
+  display: inline-block;
   width: 10rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .header-menu__search .form-control:focus {
@@ -75,22 +79,22 @@
 
 .header-menu__cart {
   position: relative;
-  margin-left: 30px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 0;
-  color: #2c71b6;
-  background-color: #ffffff;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+  color: #2c71b6;
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff;
 }
 
 .header-menu__cart:hover {
   color: #ffffff;
-  background-color: #2c71b6;
   border-color: #2c71b6;
+  background-color: #2c71b6;
 }
 
 .header-menu__cart .fas {
@@ -98,8 +102,8 @@
 }
 
 .header-carousel {
-  background-color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 html {
@@ -117,16 +121,70 @@ h5 {
   font-size: 1.75rem;
 }
 
-footer {
+legend {
+  font-weight: bold;
+}
+
+label {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.sidebar {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 15px 30px 30px;
+  border-right: 1px solid #ffffff;
+}
+
+.sidebar-options {
+  display: block;
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.sidebar-btn {
+  border-color: white;
+  border-radius: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  margin: 10px 0;
+}
+
+.form-check-input {
+  height: 0;
+  width: 0;
+}
+
+.form-check-input::before {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: 0.35rem;
+  content: "";
+  border: 1px solid #ffffff;
+}
+
+.form-check-input:checked::before {
   background-color: #ffffff;
-  opacity: 0.8;
+}
+
+footer {
   height: 100px;
+  opacity: 0.8;
+  background-color: #ffffff;
 }
 
 footer span {
   display: block;
-  text-align: center;
   padding-top: 40px;
+  text-align: center;
   color: #2c71b6;
   font-size: 1.25rem;
 }
@@ -139,9 +197,9 @@ footer span {
 
 @media (min-width: 992px) {
   .header-menu .dropdown-menu {
-    border-radius: 0;
     margin-top: -0.1px;
     margin-left: -1.5px;
+    border-radius: 0;
     background-color: #2c71b6;
   }
   .header-menu .dropdown-menu a {
@@ -152,8 +210,8 @@ footer span {
   }
   .header-menu .dropdown.show .dropdown-toggle {
     color: #ffffff;
-    background: #2c71b6;
     border-bottom: 1px solid #ffffff;
+    background: #2c71b6;
   }
   .header-menu__search .form-control {
     width: 10rem !important;
@@ -165,15 +223,15 @@ footer span {
     border-right: 1px solid #2c71b6;
   }
   .navbar-nav {
-    padding-left: 70px;
-    padding-right: 30px;
     width: calc(100% - 300px);
+    padding-right: 30px;
+    padding-left: 70px;
   }
   .navbar-nav > .nav-item {
-    text-align: center;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+    text-align: center;
   }
 }
 
@@ -197,5 +255,11 @@ footer span {
 @media (max-width: 767px) {
   .header-carousel h5 {
     display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-menu__btn {
+    margin-top: 5px !important;
   }
 }

@@ -1,12 +1,15 @@
 .header-menu {
-  background-color: rgba($color-light, 0.8);
-  font-size: 1.2rem;
   white-space: nowrap;
+
+  background-color: rgba($color-light, 0.8);
+
+  font-size: 1.2rem;
   @media (min-width: 992px) {
     .dropdown-menu {
-      border-radius: 0;
       margin-top: -0.1px;
       margin-left: -1.5px;
+
+      border-radius: 0;
       background-color: $color-dark;
 
       a {
@@ -19,15 +22,17 @@
     }
     .dropdown.show .dropdown-toggle {
       color: #ffffff;
-      background: $color-dark;
       border-bottom: 1px solid $color-light;
+      background: $color-dark;
     }
   }
 
   &__search {
     display: inline-block;
     height: 50px;
+
     border: 1px solid $color-dark;
+    flex-wrap: nowrap;
 
     @media (max-width: 991px) {
       display: inline-flex;
@@ -35,32 +40,40 @@
     }
 
     button {
-      border-radius: 0;
+      margin: 5px;
+      padding: 0;
+
+      transition: background-color 0.5s;
+
       color: $color-light;
       border-color: $color-dark;
+      border-radius: 0;
       background-color: $color-dark;
-      padding: 0;
-      margin: 5px;
-      transition: background-color 0.5s;
+
 
       &:focus,
       &:hover {
-        background-color: $color-light;
         color: $color-dark;
         border-color: $color-dark;
+        background-color: $color-light;
       }
 
       i {
-        padding: 10px;
         display: block;
+
+        padding: 10px;
       }
     }
 
     .form-control {
-      border: none;
-      font-size: 1.2rem;
-      background-color: transparent;
+      display: inline-block;
       width: 10rem;
+
+      border: none;
+      background-color: transparent;
+
+      font-size: 1.2rem;
+      white-space: nowrap;
 
       &:focus {
         box-shadow: none;
@@ -77,21 +90,25 @@
 
   &__cart {
     position: relative;
-    margin-left: 30px;
+
+    order: 2;
+
     width: 50px;
     height: 50px;
+    margin-left: 30px;
+
+    color: $color-dark;
     border: none;
     border-radius: 0;
-    color: $color-dark;
     background-color: $color-light;
-    order: 2;
-    @media (max-width: 991px){
+    @media (max-width: 991px) {
       margin-top: -7px !important;
     }
+
     &:hover {
       color: $color-light;
-      background-color: $color-dark;
       border-color: $color-dark;
+      background-color: $color-dark;
     }
 
     .fas {
@@ -101,8 +118,8 @@
 }
 
 .header-carousel {
-  background-color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid $color-light;
+  background-color: rgba(0, 0, 0, 0.3);
   @media (max-width: 767px) {
     h5 {
       display: none;
@@ -122,14 +139,20 @@
 
 .navbar-nav {
   @media (min-width: 992px) {
-    padding-left: 70px;
-    padding-right: 30px;
     width: calc(100% - 300px);
+    padding-right: 30px;
+    padding-left: 70px;
     > .nav-item {
-      text-align: center;
       flex-grow: 1;
+
+      text-align: center;
     }
   }
 }
 
+@media (max-width: 575px) {
+  .header-menu__btn {
+    margin-top: 5px !important;
+  }
+}
 

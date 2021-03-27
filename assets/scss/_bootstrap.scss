@@ -7,7 +7,9 @@
   .navbar-nav {
     .nav-item .nav-link {
       white-space: nowrap;
+
       color: $color-dark;
+
       font-size: 1.2rem;
     }
 
@@ -30,5 +32,4 @@
 .navbar-toggler:hover {
   border-radius: 1px;
   box-shadow: 0 0 0 1.3px #e59700, 0 0 0 2px $color-light !important;
-
 }
