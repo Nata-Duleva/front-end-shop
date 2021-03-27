@@ -131,21 +131,19 @@ label {
 }
 
 .sidebar {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: white;
+  color: #ffffff;
   padding: 15px 30px 30px;
-  border-right: 1px solid #ffffff;
 }
 
 .sidebar-options {
   display: block;
-  color: white;
+  color: #ffffff;
   font-size: 1.25rem;
   margin-bottom: 30px;
 }
 
 .sidebar-btn {
-  border-color: white;
+  border-color: #ffffff;
   border-radius: 0;
 }
 
@@ -233,6 +231,10 @@ footer span {
             flex-grow: 1;
     text-align: center;
   }
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-right: 1px solid #ffffff;
+  }
 }
 
 @media (max-width: 991px) {
@@ -249,6 +251,9 @@ footer span {
   }
   .header-menu__cart {
     margin-top: -7px !important;
+  }
+  .sidebar {
+    border-top: 1px solid #ffffff;
   }
 }
 
