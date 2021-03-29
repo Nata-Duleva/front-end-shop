@@ -29,7 +29,14 @@
     margin-top: 5px !important;
   }
 }
+
 .navbar-toggler:hover {
   border-radius: 1px;
   box-shadow: 0 0 0 1.3px #e59700, 0 0 0 2px $color-light !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: $breadcrumb-divider;
+
+  color: $color-light;
 }

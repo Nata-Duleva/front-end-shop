@@ -1,0 +1,184 @@
+.breadcrumb {
+  padding: 1rem 0 0 0;
+
+  opacity: 0.5;
+  background-color: transparent;
+
+  font-size: 0.875rem;
+}
+
+.main {
+  &-title {
+    color: $color-light;
+
+    font-size: 2.85rem;
+  }
+
+  &-filter {
+    width: 100%;
+    height: calc(1.5em + 0.9rem + 2px);
+
+    color: $color-light;
+    border-color: $color-light;
+    border-radius: 0;
+    background-color: $color-dark;
+  }
+
+  &-breadcrumb,
+  &-breadcrumb__link {
+    color: $color-light !important;
+  }
+
+  &-content {
+    margin-top: 30px;
+  }
+}
+
+.wrapper {
+  margin-bottom: 30px;
+
+  border: 1px solid $color-light;
+}
+
+.content {
+  &-img {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 180px;
+
+    opacity: 0.75;
+    background-color: $color-light;
+  }
+
+  &-title {
+    padding-top: 0.75rem;
+
+    color: $color-light;
+
+    font-size: 1.75rem;
+  }
+
+  &-description {
+    color: $color-light;
+
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  &-specifications {
+    margin-top: 15px;
+
+    color: $color-light;
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    span {
+      display: block;
+
+      margin-top: 7px;
+    }
+  }
+
+  &-price {
+    text-align: center;
+
+    color: $color-light;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &-load {
+    margin-bottom: 30px;
+
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 2rem;
+
+    a {
+      color: $color-light;
+
+      &:hover {
+        color: $color-light;
+      }
+    }
+  }
+}
+
+.btn {
+  &-vertical {
+    position: absolute;
+    top: 6px;
+    right: 21px;
+  }
+
+  &-img {
+    display: block;
+
+    width: 30px !important;
+    height: 30px;
+    padding: 0;
+
+    color: $color-dark;
+    border-color: $color-dark;
+    border-radius: 0;
+
+    &:first-child {
+      margin-bottom: 5px !important;
+    }
+
+    &:hover {
+      background-color: $color-dark;
+    }
+  }
+
+  &-content {
+    display: block;
+
+    padding: 15px 15px 0 15px;
+
+    &__cart {
+      background-color: rgba($color-light, 0.2);
+    }
+
+    &__details,
+    &__cart {
+      margin-bottom: 30px !important;
+      padding: 8px 5px 10px;
+
+      transition: color 0.5s, background-color 0.5s;
+
+      color: $color-light;
+      border-color: $color-light;
+      border-radius: 0;
+
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.62rem;
+      @media (max-width: 1199px) {
+        font-size: 0.9rem;
+      }
+
+      &:hover {
+        color: $color-dark;
+        border-color: $color-light;
+        background-color: rgba($color-light, 0.75);
+      }
+
+      i {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+
+
+

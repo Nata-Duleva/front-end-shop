@@ -1,18 +1,20 @@
 legend {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 label {
-  font-size: 1.25rem;
   margin-left: 0.5rem;
+
+  font-size: 1.25rem;
 }
 
 .sidebar {
-  color: $color-light;
   padding: 15px 30px 30px;
+
+  color: $color-light;
   @media (min-width: 992px) {
-    background-color: rgba($color-light, 0.3);
     border-right: 1px solid $color-light;
+    background-color: rgba($color-light, 0.3);
   }
   @media (max-width: 991px) {
     border-top: 1px solid $color-light;
@@ -20,14 +22,18 @@ label {
 
   &-options {
     display: block;
-    color: $color-light;
-    font-size: 1.25rem;
+
     margin-bottom: 30px;
+
+    color: $color-light;
+
+    font-size: 1.25rem;
   }
 
   &-btn {
     border-color: $color-light;
     border-radius: 0;
+    background-color: $color-dark;
   }
 }
 
@@ -40,15 +46,18 @@ label {
     margin: 10px 0;
 
     &-input {
-      height: 0;
       width: 0;
+      height: 0;
 
       &::before {
         display: block;
+
         width: 0.8rem;
         height: 0.8rem;
         margin-top: 0.35rem;
+
         content: "";
+
         border: 1px solid $color-light;
       }
 
