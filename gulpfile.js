@@ -13,7 +13,7 @@ const path = {
     scssFiles: './assets/scss/**/*.scss',
     scssFile: './assets/scss/style.scss',
     cssFolder: './assets/css/',
-    cssFiles: './assets/css/*.css',
+    cssFiles: './assets/css/**/*.css',
     cssFile: './assets/css/style.css',
     htmlFiles: './*.html',
     jsFiles: './assets/js/**/*.js'
@@ -22,8 +22,8 @@ const path = {
 const plugins = [
     autoprefixer({
         overrideBrowserslist: [
-            'last 5 versions',
-            '> 1%'
+            'last 10 versions',
+            '> 0.1%'
         ],
         cascade: true
     }),
@@ -31,34 +31,21 @@ const plugins = [
 ];
 
 function scss() {
-    return src(path.scssFile).
-    pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
-    pipe(postcss(plugins)).
-    pipe(dest(path.cssFolder)).
-    pipe(notify({
+    return src(path.scssFile).pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).pipe(postcss(plugins)).pipe(dest(path.cssFolder)).pipe(notify({
         message: 'Compiled!',
         sound: false
-    })).
-    pipe(browserSync.reload({stream: true}));
+    })).pipe(browserSync.reload({stream: true}));
 }
 
 function scssDev() {
-    return src(path.scssFile, {sourcemaps: true}).
-    pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).
-    pipe(postcss(plugins)).
-    pipe(dest(path.cssFolder, {sourcemaps: true})).
-    pipe(notify({
+    return src(path.scssFile, {sourcemaps: true}).pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)).pipe(postcss(plugins)).pipe(dest(path.cssFolder, {sourcemaps: true})).pipe(notify({
         message: 'Compiled!',
         sound: false
-    })).
-    pipe(browserSync.reload({stream: true}));
+    })).pipe(browserSync.reload({stream: true}));
 }
 
 function comb() {
-    return src(path.scssFiles).
-    pipe(csscomb()).
-    on('error', notify.onError((error) => `File: ${error.message}`)).
-    pipe(dest(path.scssFolder));
+    return src(path.scssFiles).pipe(csscomb()).on('error', notify.onError((error) => `File: ${error.message}`)).pipe(dest(path.scssFolder));
 }
 
 function syncInit() {
@@ -74,7 +61,7 @@ async function sync() {
 
 function watchFiles() {
     syncInit();
-    watch(path.scssFiles, series(scss));
+    watch(path.scssFiles, scss);
     watch(path.htmlFiles, sync);
     watch(path.jsFiles, sync);
     // watch(path.cssFiles, sync);

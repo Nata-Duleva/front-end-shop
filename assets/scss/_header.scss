@@ -101,10 +101,13 @@
     height: 50px;
     margin-left: 30px;
 
+    transition: background-color 0.5s, color 0.5s;
+
     color: $color-dark;
     border: none;
     border-radius: 0;
     background-color: $color-light;
+
     @media (max-width: 991px) {
       margin-top: -7px !important;
     }
@@ -113,10 +116,38 @@
       color: $color-light;
       border-color: $color-dark;
       background-color: $color-dark;
+
+      div {
+        color: $color-dark;
+        background-color: $color-light;
+      }
     }
 
     .fas {
       font-size: 1.5rem;
+    }
+
+    div {
+      position: absolute;
+      top: -11px;
+      left: -11px;
+
+      display: none;
+
+      width: 25px;
+      height: 25px;
+
+      transition: background-color 0.5s, color 0.5s;
+      text-align: center;
+
+      color: $color-light;
+      border-radius: 11px;
+      background-color: $color-dark;
+      box-shadow: 0 0 10px rgba($color-dark, 0.5);
+
+      &.show {
+        display: block;
+      }
     }
   }
 }

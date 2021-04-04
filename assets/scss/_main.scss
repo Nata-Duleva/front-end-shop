@@ -146,6 +146,15 @@
 
     &__cart {
       background-color: rgba($color-light, 0.2);
+
+      &.disabled,
+      &:disabled,
+      &:active {
+        opacity: 1;
+        color: $color-light !important;
+        border-color: $color-light !important;
+        background-color: rgba($color-light, 0.1) !important;
+      }
     }
 
     &__details,
@@ -178,7 +187,3 @@
     }
   }
 }
-
-
-
-

@@ -90,6 +90,9 @@
   width: 50px;
   height: 50px;
   margin-left: 30px;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
   color: #2c71b6;
   border: none;
   border-radius: 0;
@@ -102,8 +105,35 @@
   background-color: #2c71b6;
 }
 
+.header-menu__cart:hover div {
+  color: #2c71b6;
+  background-color: #ffffff;
+}
+
 .header-menu__cart .fas {
   font-size: 1.5rem;
+}
+
+.header-menu__cart div {
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  display: none;
+  width: 25px;
+  height: 25px;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 11px;
+  background-color: #2c71b6;
+  -webkit-box-shadow: 0 0 10px rgba(44, 113, 182, 0.5);
+          box-shadow: 0 0 10px rgba(44, 113, 182, 0.5);
+}
+
+.header-menu__cart div.show {
+  display: block;
 }
 
 .header-carousel {
@@ -254,6 +284,13 @@ h5 {
 
 .btn-content__cart {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-content__cart.disabled, .btn-content__cart:disabled, .btn-content__cart:active {
+  opacity: 1;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .btn-content__details, .btn-content__cart {
